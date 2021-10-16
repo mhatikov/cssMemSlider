@@ -18,7 +18,7 @@ body h1{
     margin: 100px auto;
     position: relative;
     width: 50%;
-    height: 45%;
+    height: 45vh;
 }
 
 input{
@@ -62,6 +62,17 @@ input{
     text-align: center;
     z-index: 99;
     bottom:-6%;
+    display: flex;
+    justify-content: flex-end;
+}
+.nav__dots{
+    display: flex;
+    width: 25%;
+    justify-content: center;
+}
+.nav__dots>div{
+    width: 100%;
+    display: flex;
 }
 .dots{
     position: relative;
@@ -73,15 +84,35 @@ input{
     background: rgb(65, 65, 114);
     transition: all ease 0.3s;
 }
+.dots::before{
+    content: '';
+    width: 25px;
+    height: 100%;
+    display: block;
+}
+.dots::after{
+    top: 0;
+    right: 25%;
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 100%;
+    display: block;
+}
 .dots:hover{
     background-color: white;
     cursor: pointer;
     border: 1px solid white;
 }
-
+.text{
+    font-size: 25px;
+    width: 60%;
+    color: white;
+}
 #i1:checked ~ #one,
 #i2:checked ~ #two,
-#i3:checked ~ #three{
+#i3:checked ~ #three,
+#i4:checked ~ #four{
     z-index: 9;
     opacity: 1;
     left: 0;
@@ -91,6 +122,43 @@ input{
 }
 #i1:checked ~ .nav #dot1,
 #i2:checked ~ .nav #dot2,
-#i3:checked ~ .nav #dot3{
+#i3:checked ~ .nav #dot3,
+#i4:checked ~ .nav #dot4{
     background: none;
+}
+
+@media (max-width: 1300px){
+    .wrapper{
+        margin: 100px auto;
+        position: relative;
+        width: 70%;
+        height: 35vh;
+    }
+    .dots::before{
+        content: '';
+        width: 18px;
+        height: 100%;
+        display: block;
+    }
+    .dots::after{
+        top: 0;
+        right: 25%;
+        position: absolute;
+        content: '';
+        width: 18px;
+        height: 100%;
+        display: block;
+    }
+}
+
+@media (max-width: 1300px){
+    .wrapper{
+        margin: 100px auto;
+        position: relative;
+        width: 95%;
+        height: 35vh;
+    }
+}
+@media (max-width: 500px){
+    
 }
