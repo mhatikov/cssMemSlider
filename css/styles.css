@@ -159,6 +159,50 @@ input{
         height: 35vh;
     }
 }
-@media (max-width: 500px){
-    
+@media (max-width: 724px){
+    .nav{
+        justify-content: center;
+    }
+    .nav__dots{
+        display: flex;
+        width: 25%;
+        justify-content: center;
+    }
+    .dots::before{
+        content: '';
+        width: 25px;
+        height: 100%;
+        display: block;
+    }
+    .dots::after{
+        top: 0;
+        right: 25%;
+        position: absolute;
+        content: '';
+        width: 25px;
+        height: 100%;
+        display: block;
+    }
+    .text{
+        width: 100%;
+        position: relative;
+        top: 15%;
+    }
+}
+@media(max-width: 600px){
+    .dots::before{
+        content: '';
+        width: 18px;
+        height: 100%;
+        display: block;
+    }
+    .dots::after{
+        top: 0;
+        right: 25%;
+        position: absolute;
+        content: '';
+        width: 18px;
+        height: 100%;
+        display: block;
+    }
 }
