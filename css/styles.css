@@ -1,0 +1,206 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+html{
+    background-color: rgb(10, 10, 10);
+
+}
+body h1{
+    font-size: 4em;
+    margin: 8% 10% auto;
+    text-align: center;
+    color: azure;
+}
+
+.wrapper{
+    margin: 100px auto;
+    position: relative;
+    width: 50%;
+    height: 45vh;
+}
+
+input{
+    display: none;
+}
+
+.slide{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: all ease 0.4s;
+    opacity: 0;
+    left: 20%;
+}
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+.content{
+    position: absolute;
+    width: 70%;
+    height: 90%;
+    top: 0;
+    left: 15%;
+    right: 15%;
+    text-align: center;
+}
+.content h2{
+    font-size: 2em;
+    color: white;
+}
+.content p{
+    color: mistyrose; 
+}
+
+
+.nav{
+    position: absolute;
+    width: 100%;
+    height: 12px;
+    text-align: center;
+    z-index: 99;
+    bottom:-6%;
+    display: flex;
+    justify-content: flex-end;
+}
+.nav__dots{
+    display: flex;
+    width: 25%;
+    justify-content: center;
+}
+.nav__dots>div{
+    width: 100%;
+    display: flex;
+}
+.dots{
+    position: relative;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 1px solid rgb(65, 65, 114);
+    background: rgb(65, 65, 114);
+    transition: all ease 0.3s;
+}
+.dots::before{
+    content: '';
+    width: 25px;
+    height: 100%;
+    display: block;
+}
+.dots::after{
+    top: 0;
+    right: 25%;
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 100%;
+    display: block;
+}
+.dots:hover{
+    background-color: white;
+    cursor: pointer;
+    border: 1px solid white;
+}
+.text{
+    font-size: 25px;
+    width: 60%;
+    color: white;
+}
+#i1:checked ~ #one,
+#i2:checked ~ #two,
+#i3:checked ~ #three,
+#i4:checked ~ #four{
+    z-index: 9;
+    opacity: 1;
+    left: 0;
+}
+#slide{
+    z-index: -1;
+}
+#i1:checked ~ .nav #dot1,
+#i2:checked ~ .nav #dot2,
+#i3:checked ~ .nav #dot3,
+#i4:checked ~ .nav #dot4{
+    background: none;
+}
+@media (max-width: 1300px){
+    .wrapper{
+        margin: 100px auto;
+        position: relative;
+        width: 70%;
+        height: 35vh;
+    }
+    .dots::before{
+        content: '';
+        width: 18px;
+        height: 100%;
+        display: block;
+    }
+    .dots::after{
+        top: 0;
+        right: 25%;
+        position: absolute;
+        content: '';
+        width: 18px;
+        height: 100%;
+        display: block;
+    }
+}
+@media (max-width: 1300px){
+    .wrapper{
+        margin: 100px auto;
+        position: relative;
+        width: 95%;
+        height: 35vh;
+    }
+}
+@media (max-width: 724px){
+    .nav{
+        justify-content: center;
+    }
+    .nav__dots{
+        display: flex;
+        width: 25%;
+        justify-content: center;
+    }
+    .dots::before{
+        content: '';
+        width: 25px;
+        height: 100%;
+        display: block;
+    }
+    .dots::after{
+        top: 0;
+        right: 25%;
+        position: absolute;
+        content: '';
+        width: 25px;
+        height: 100%;
+        display: block;
+    }
+    .text{
+        width: 100%;
+        position: relative;
+        top: 15%;
+    }
+}
+@media(max-width: 600px){
+    .dots::before{
+        content: '';
+        width: 18px;
+        height: 100%;
+        display: block;
+    }
+    .dots::after{
+        top: 0;
+        right: 25%;
+        position: absolute;
+        content: '';
+        width: 18px;
+        height: 100%;
+        display: block;
+    }
+}
