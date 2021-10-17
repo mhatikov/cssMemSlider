@@ -126,7 +126,6 @@ input{
 #i4:checked ~ .nav #dot4{
     background: none;
 }
-
 @media (max-width: 1300px){
     .wrapper{
         margin: 100px auto;
@@ -150,7 +149,6 @@ input{
         display: block;
     }
 }
-
 @media (max-width: 1300px){
     .wrapper{
         margin: 100px auto;
